@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      html { font-family: 'Inter', sans-serif; }
+      @supports (font-variation-settings: normal) {
+        html { font-family: 'Inter var', sans-serif; }
+      }
+
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: 'Inter var', sans-serif;
+      }
+
+      .card:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar is-dark">
+      <div class="container is-fluid">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <h1 class="title is-2 has-text-white">Blog</h1>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div id="post-form-container" class="container">
+        <h2 id="post-form-title" class="title">Add Post</h2>
+
+        <form id="post-form">
+          <div class="field">
+            <label for="post-title-input" class="label">Title</label>
+            <div class="control">
+              <input id="post-title-input" class="input" placeholder="Title" type="text">
+            </div>
+          </div>
+  
+          <div class="field">
+            <label for="post-body-input" class="label">Body</label>
+            <div class="control">
+              <textarea id="post-body-input" class="textarea" placeholder="Body"></textarea>
+            </div>
+          </div>
+  
+          <button id="submit-post-button" class="button is-info">Add</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section has-background-white-bis">
+      <div class="container">
+        <h2 class="title">Posts</h2>
+
+        <div id="posts-list">
+          <div class="notification is-dark">No posts to show.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-white">
+      <div class="content has-text-centered">
+        &copy; 2020 <a>Blog</a> | All rights reserved.
+      </div>
+    </footer>
+    
+    <script src="build/index.bundle.js"></script>
+  </body>
+</html>
